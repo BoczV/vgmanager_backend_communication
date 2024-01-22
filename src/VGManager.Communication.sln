@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VGManager.Communication.Kafka", "VGManager.Communication.Kafka\VGManager.Communication.Kafka.csproj", "{178DA86F-636D-42FC-9BF9-73229D97F7E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VGManager.Communication.Kafka.ReqResp", "VGManager.Communication.Kafka.ReqResp\VGManager.Communication.Kafka.ReqResp.csproj", "{D1AE863D-F72A-4E75-AB35-15A094ABD420}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VGManager.Communication.Models", "VGManager.Communication.Models\VGManager.Communication.Models.csproj", "{2BD667C3-0D38-4D60-9034-9506BEEBE580}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{178DA86F-636D-42FC-9BF9-73229D97F7E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178DA86F-636D-42FC-9BF9-73229D97F7E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178DA86F-636D-42FC-9BF9-73229D97F7E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178DA86F-636D-42FC-9BF9-73229D97F7E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1AE863D-F72A-4E75-AB35-15A094ABD420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1AE863D-F72A-4E75-AB35-15A094ABD420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1AE863D-F72A-4E75-AB35-15A094ABD420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1AE863D-F72A-4E75-AB35-15A094ABD420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BD667C3-0D38-4D60-9034-9506BEEBE580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD667C3-0D38-4D60-9034-9506BEEBE580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD667C3-0D38-4D60-9034-9506BEEBE580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD667C3-0D38-4D60-9034-9506BEEBE580}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
