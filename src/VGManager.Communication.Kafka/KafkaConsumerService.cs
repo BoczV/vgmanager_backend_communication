@@ -27,7 +27,7 @@ public sealed class KafkaConsumerService<TMessageType> : IKafkaConsumerService<T
         _correlationContextAccessor = correlationContextAccessor;
     }
 
-    public async Task ConsumeAsync(CancellationToken cancellationToken, Func<TMessageType, Task> handlerMethod)
+    public async Task ConsumeAsync(Func<TMessageType, Task> handlerMethod, CancellationToken cancellationToken)
     {
         await ConsumeLogicAsync(handlerMethod, ProcessMessageParallelAsync, cancellationToken);
     }
