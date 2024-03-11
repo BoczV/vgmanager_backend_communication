@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VGManager.Communication.Mod
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7D0B8CFE-6161-4846-A26D-AEF9C59414A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VGManager.Communication", "VGManager.Communication\VGManager.Communication.csproj", "{8014B1DC-8A58-4BF0-B504-0CC26451508C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VGManager.Communication", "VGManager.Communication.Tests\VGManager.Communication.Tests.csproj", "{8014B1DC-8A58-4BF0-B504-0CC26451508C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

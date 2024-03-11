@@ -71,12 +71,24 @@ public sealed class KafkaProducerService<TMessageType> : IKafkaProducerService<T
 
             var deliveryResult = await _producer.ProduceAsync(topic, message, cancellationToken);
 
-            _logger.LogInformation($"{nameof(KafkaProducerService<TMessageType>)}.{nameof(ProduceAsync)} Delivered message to topic: '{deliveryResult.Topic}' with offset: '{deliveryResult.TopicPartitionOffset}'");
+            _logger.LogInformation(
+                "{service}.{func} Delivered message to topic: '{topic}' with offset: '{topicPartitionOffset}'",
+                nameof(KafkaProducerService<TMessageType>),
+                nameof(ProduceAsync),
+                deliveryResult.Topic,
+                deliveryResult.TopicPartitionOffset.Offset
+                );
             _logger.LogDebug("{@Message}", message.Value);
         }
         catch (ProduceException<Null, TMessageType> e)
         {
-            _logger.LogError(e, $"{nameof(KafkaProducerService<TMessageType>)}.{nameof(ProduceAsync)} Delivery failed: {e.Error.Reason}");
+            _logger.LogError(
+                e, 
+                "{service}.{func} Delivery failed: {errorReason}",
+                nameof(KafkaProducerService<TMessageType>),
+                nameof(ProduceAsync),
+                e.Error.Reason
+                );
         }
     }
 
