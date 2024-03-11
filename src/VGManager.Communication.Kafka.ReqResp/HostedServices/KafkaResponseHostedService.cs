@@ -24,7 +24,7 @@ public class KafkaResponseHostedService<TResponse> : BackgroundService where TRe
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        await _consumerService.ConsumeAsync(stoppingToken, (message) =>
+        await _consumerService.ConsumeAsync((message) =>
         {
             var task = _store.GetAndRemove(message.CommandInstanceId);
             if (task is not null)
@@ -37,6 +37,6 @@ public class KafkaResponseHostedService<TResponse> : BackgroundService where TRe
                 _logger.LogDebug("Message with id: {Id} was not identified as a response message. Skipping process.", message.CommandInstanceId);
             }
             return Task.CompletedTask;
-        });
+        }, stoppingToken);
     }
 }

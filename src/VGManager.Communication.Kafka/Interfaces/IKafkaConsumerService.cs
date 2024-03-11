@@ -2,6 +2,6 @@ namespace VGManager.Communication.Kafka.Interfaces;
 
 public interface IKafkaConsumerService<out TMessageType> : IDisposable
 {
-    Task ConsumeAsync(CancellationToken cancellationToken, Func<TMessageType, Task> handlerMethod);
+    Task ConsumeAsync(Func<TMessageType, Task> handlerMethod, CancellationToken cancellationToken);
     Task ConsumeSequentiallyAsync(Func<TMessageType, Task> handlerMethod, CancellationToken cancellationToken);
 }
